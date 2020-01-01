@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class='container'>
+    <!-- 此处引用art-template的输出语法 因为data是数组记得格式为data[0] -->
+    <img src="{{data[0].img}}">
+    <h1>{{data[0].Code}}</h1>
+    <h2>{{data[0].camp}}</h2>
+  </div>
+</body>
+</html>

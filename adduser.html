@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+    input{
+      margin-top:10px;
+    }
+    input:nth-last-child(1){
+      background-color: rgb(184, 184, 194);
+      padding: 10px 100px;
+      margin-bottom:40px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <form action='/adduser?id=1' method='POST' enctype="multipart/form-data">
+      <input type="file" name="img"><br>
+      <label for=''>干员代号：</label><input type='text' class="form-control" name='Code' placeholder="{{data[0].Code}}">
+      <label for=''>阵营：</label><input type='text' class="form-control" name='camp' placeholder="{{data[0].camp}}">
+      <label for=''>职业：</label><input type='text' class="form-control" name='occupation' placeholder="{{data[0].occupation}}">
+      <label for=''>星级：</label><input type='text' class="form-control" name='grade' placeholder="{{data[0].grade}}">
+      <label for=''>性别：</label><input type='text' class="form-control" name='gender' placeholder="{{data[0].gender}}">
+      <label for=''>是否感染：</label><input type='text' class="form-control" name='infection' placeholder="{{data[0].infection}}">
+      <label for=''>获取途径：</label><input type='text' class="form-control" name='access' placeholder="{{data[0].access}}">
+      <label for=''>初始生命：</label><input type='text' class="form-control" name='initialLife' placeholder="{{data[0].initialLife}}">
+      <label for=''>初始攻击：</label><input type='text' class="form-control" name='initialAttack' placeholder="{{data[0].initialAttack}}">
+      <label for=''>初始防御：</label><input type='text' class="form-control" name='initialDefense' placeholder="{{data[0].initialDefense}}">
+      <label for=''>初始防抗：</label><input type='text' class="form-control" name='initialResistance' placeholder="{{data[0].initialResistance}}">
+      <label for=''>再部署：</label><input type='text' class="form-control" name='redeploy' placeholder="{{data[0].redeploy}}">
+      <label for=''>部署费用：</label><input type='text' class="form-control" name='costs' placeholder="{{data[0].costs}}">
+      <label for=''>完美部署费用：</label><input type='text' class="form-control" name='prefectCosts' placeholder="{{data[0].prefectCosts}}">
+      <label for=''>阻挡数：</label> <input type='text' class="form-control" name='block' placeholder="{{data[0].block}}">
+      <label for=''>攻击速度：</label><input type='text' class="form-control" name='attackSpeed' placeholder="{{data[0].attackSpeed}}">
+      <label for=''>特性：</label><input type='text' class="form-control" name='feature' placeholder="{{data[0].feature}}">
+      <label for=''>标签：</label><input type='text' class="form-control" name='tag' placeholder="{{data[0].tag}}">
+      <input type="submit" value="提交">
+    </form>
+  </div>
+</body>
+</html>

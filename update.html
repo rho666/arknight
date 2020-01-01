@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+    input{
+      margin-top:10px;
+    }
+    input:nth-last-child(1){
+      background-color: rgb(184, 184, 194);
+      padding: 10px 100px;
+      margin-bottom:40px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <form action='/update?id={{data[0].ID}}' method='POST'>
+      <img src='{{data[0].img}}'>
+      <input type='text' class="form-control" name='Code' value="{{data[0].Code}}">
+      <input type='text' class="form-control" name='camp' value="{{data[0].camp}}">
+      <input type='text' class="form-control" name='occupation' value="{{data[0].occupation}}">
+      <input type='text' class="form-control" name='grade' value="{{data[0].grade}}">
+      <input type='text' class="form-control" name='gender' value="{{data[0].gender}}">
+      <input type='text' class="form-control" name='infection' value="{{data[0].infection}}">
+      <input type='text' class="form-control" name='access' value="{{data[0].access}}">
+      <input type='text' class="form-control" name='initialLife' value="{{data[0].initialLife}}">
+      <input type='text' class="form-control" name='initialAttack' value="{{data[0].initialAttack}}">
+      <input type='text' class="form-control" name='initialDefense' value="{{data[0].initialDefense}}">
+      <input type='text' class="form-control" name='initialResistance' value="{{data[0].initialResistance}}">
+      <input type='text' class="form-control" name='redeploy' value="{{data[0].redeploy}}">
+      <input type='text' class="form-control" name='costs' value="{{data[0].costs}}">
+      <input type='text' class="form-control" name='prefectCosts' value="{{data[0].prefectCosts}}">
+      <input type='text' class="form-control" name='block' value="{{data[0].block}}">
+      <input type='text' class="form-control" name='attackSpeed' value="{{data[0].attackSpeed}}">
+      <input type='text' class="form-control" name='feature' value="{{data[0].feature}}">
+      <input type='text' class="form-control" name='tag' value="{{data[0].tag}}">
+      <input type="submit" value="提交">
+    </form>
+  </div>
+</body>
+</html>

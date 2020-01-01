@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+  td,th{
+    font-size:12px;
+  }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <table class="table table-hover">
+      <h1>干员数据表</h1>
+      <a href="/adduser?add=1" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">增加</a>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">头像</th>
+          <th scope="col">干员代号</th>
+          <th scope="col">阵营</th>
+          <th scope="col">职业</th>
+          <th scope="col">星级</th>
+          <th scope="col">性别</th>
+          <th scope="col">是否感染</th>
+          <th scope="col">获取途径</th>
+          <th scope="col">初始生命</th>
+          <th scope="col">初始攻击</th>
+          <th scope="col">初始防御</th>
+          <th scope="col">初始法抗</th>
+          <th scope="col">在部署</th>
+          <th scope="col">部署费用</th>
+          <th scope="col">完美部署费用</th>
+          <th scope="col">阻挡数</th>
+          <th scope="col">攻击速度</th>
+          <th scope="col">特性</th>
+          <th scope="col">标签</th>
+          <th scope="col">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{each data}}
+        <tr>
+          <th scope="row">{{$index+1}}</th>
+          <td><img src="{{$value.img}}"></td>
+          <td>{{$value.Code}}</td>
+          <td>{{$value.camp}}</td>
+          <td>{{$value.occupation}}</td>
+          <td>{{$value.grade}}</td>
+          <td>{{$value.gender}}</td>
+          <td>{{$value.infection}}</td>
+          <td>{{$value.access}}</td>
+          <td>{{$value.initialLife}}</td>
+          <td>{{$value.initialAttack}}</td>
+          <td>{{$value.initialDefense}}</td>
+          <td>{{$value.initialResistance}}</td>
+          <td>{{$value.redeploy}}</td>
+          <td>{{$value.costs}}</td>
+          <td>{{$value.prefectCosts}}</td>
+          <td>{{$value.block}}</td>
+          <td>{{$value.attackSpeed}}</td>
+          <td>{{$value.feature}}</td>
+          <td>{{$value.tag}}</td>
+          <td>
+            <a href='/detailed?id={{$value.ID}}'>详细</a>
+            <a href='/update?id={{$value.ID}}' style="color:green">修改</a>
+            <a href='/delete?id={{$value.ID}}' style="color:red">删除</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
