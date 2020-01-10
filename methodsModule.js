@@ -38,6 +38,7 @@ module.exports = {
     form.parse(req,(err,fields,files)=>{
       let ctime = sd.format(new Date(),'YYYYMMDDHHmmss')
       let files_name = 'img/'+ctime+'_'+files.img.name;
+      // 通过rename()方法移动路径
       fs.rename(files.img.path,'./'+files_name,(err)=>{
         if(err){
           console.log(err);
@@ -47,8 +48,8 @@ module.exports = {
       linkdb.add(fields,(status)=>{
         if(status >= 1){
           res.setHeader('Content-Type','text/html;charset="utf-8"');
-        let jump = '<script>alert("添加成功");window.location.href="/"</script>'
-        res.end(jump);
+          let jump = '<script>alert("添加成功");window.location.href="/"</script>'
+          res.end(jump);
         }
       });
     });
