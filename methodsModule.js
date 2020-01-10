@@ -1,5 +1,6 @@
 // 引用art-template渲染引擎
 const template = require('art-template');
+// 解析和查询字符串
 const querystring = require('querystring');
 const sd = require('silly-datetime')
 const fs = require('fs');

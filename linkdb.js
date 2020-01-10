@@ -56,7 +56,7 @@ module.exports = {
       for (item in post_data){
         data += item+"='"+post_data[item]+"',";
       }
-      data = data.slice(0,data.length-1);  // 切割字符串slice(start,end)返回一个数组
+      data = data.slice(0,data.length-1);  // 切割字符串slice(start,end)
       let sql = 'update product set '+ data+ '  where '+this.wh;
       connection.query(sql,(err,data)=>{
         if(err){
